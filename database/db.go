@@ -67,8 +67,12 @@ func InitDB() {
 		&model.User{},
 		&model.Product{},
 		&model.Order{},
-		&model.StockLog{},
-		&model.Performance{},
+		&model.Category{},
+		&model.Cart{},
+		&model.Address{},
+		&model.OrderItem{},
+		&model.Banner{},
+		&model.Bulletin{},
 	); err != nil {
 		log.Fatalf("数据库迁移失败: %v", err)
 	}

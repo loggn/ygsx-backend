@@ -3,12 +3,13 @@ package model
 import "time"
 
 type Product struct {
-	ID        uint      `gorm:"primaryKey" json:"id"`
-	Name      string    `gorm:"size:100" json:"name"`
-	Picture   string    `gorm:"size:255" json:"picture"`
-	Price     float64   `gorm:"type:decimal(10,2)" json:"price"`
-	Stock     int       `gorm:"default:0" json:"stock"`
-	Status    string    `gorm:"size:10" json:"status"` // on / off
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
+	ID          uint      `gorm:"primaryKey" json:"id"`
+	CategoryID  uint      `json:"category_id"`
+	Name        string    `json:"name"`
+	Image       string    `json:"image"`
+	Description string    `json:"description"`
+	Price       float64   `json:"price"`
+	Stock       int       `json:"stock"`
+	CreatedAt   time.Time `json:"created_at"`
+	UpdatedAt   time.Time `json:"updated_at"`
 }
